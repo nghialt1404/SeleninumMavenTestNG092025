@@ -3,7 +3,7 @@
 <suite name="SuiteRunByClass" verbose="1">
     <test name="FirstTest">
         <classes>
-            <class name="TestNg.RunTestNG"/>
+            <class name="Bai9_TestNg.RunTestNG"/>
         </classes>
     </test>
 </suite>
