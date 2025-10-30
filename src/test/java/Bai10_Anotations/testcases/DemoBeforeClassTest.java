@@ -1,5 +1,6 @@
 package Bai10_Anotations.testcases;
 
+import Bai11_Assert.common.LocatorsCRM;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 

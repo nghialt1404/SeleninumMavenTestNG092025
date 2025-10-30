@@ -1,4 +1,4 @@
-package Bai10_Anotations.testcases;
+package Bai11_Assert.common;
 
 public class LocatorsCRM {
     // xpath trang Login

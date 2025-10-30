@@ -1,6 +1,6 @@
 package Bai16_ThucHanhCRM;
 
-import Bai10_Anotations.testcases.LocatorsCRM;
+import Bai11_Assert.common.LocatorsCRM;
 import Bai11_Assert.common.BaseTest;
 import keyword.WebUI;
 import org.openqa.selenium.By;

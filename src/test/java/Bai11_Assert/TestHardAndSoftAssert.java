@@ -1,12 +1,11 @@
 package Bai11_Assert;
 
-import Bai10_Anotations.testcases.LocatorsCRM;
+import Bai11_Assert.common.LocatorsCRM;
 import Bai11_Assert.common.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
