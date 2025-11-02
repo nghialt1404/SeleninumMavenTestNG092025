@@ -2,7 +2,7 @@ package Bai16_ThucHanhCRM;
 
 import Bai11_Assert.common.LocatorsCRM;
 import Bai11_Assert.common.BaseTest;
-import keyword.WebUI;
+import keyword.WebUI_OLD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,50 +22,50 @@ public class TestAddCustomer extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputEmail), "admin@example.com");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputEmail), "admin@example.com");
 
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputPassword), "123456");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputPassword), "123456");
 
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.buttonLogin), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.buttonLogin), 5);
 
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.menuCustomers), 5);
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.buttonNewCustomer), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.menuCustomers), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.buttonNewCustomer), 5);
 
         //Add customer details
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputCompany), CUSTOMER_NAME);
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputVatNumber), "124635");
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputphone), "0948274626");
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputWebsite), WEBSITE);
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputCompany), CUSTOMER_NAME);
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputVatNumber), "124635");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputphone), "0948274626");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputWebsite), WEBSITE);
         //Dropdown Group
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.dropdownGroup), 2);
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputSearchGroup), "My Group Testing");
-        WebUI.clickElement(driver, By.xpath("//span[contains(normalize-space(),'My Group Testing')]"));
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.dropdownGroup), 2);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.dropdownGroup), 2);
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputSearchGroup), "My Group Testing");
+        WebUI_OLD.clickElement(driver, By.xpath("//span[contains(normalize-space(),'My Group Testing')]"));
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.dropdownGroup), 2);
 
         //Dropdown Currency
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.dropdownCurrency), 2);
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputSearchCurrency), "USD");
-        WebUI.clickElement(driver, By.xpath("//a[@id='bs-select-2-1']"));
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.dropdownCurrency), 2);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.dropdownCurrency), 2);
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputSearchCurrency), "USD");
+        WebUI_OLD.clickElement(driver, By.xpath("//a[@id='bs-select-2-1']"));
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.dropdownCurrency), 2);
 
         // Dropdown Default Language
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.dropdownDefaultLanguage), 2);
-        WebUI.clickElement(driver, By.xpath("//span[normalize-space()='Vietnamese']"),2);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.dropdownDefaultLanguage), 2);
+        WebUI_OLD.clickElement(driver, By.xpath("//span[normalize-space()='Vietnamese']"),2);
 
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputAddress), "Hanoi, Vietnam");
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputCity), "Hanoi");
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputState), "Ba Dinh");
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputZipcode), "100000");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputAddress), "Hanoi, Vietnam");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputCity), "Hanoi");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputState), "Ba Dinh");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputZipcode), "100000");
         //Dropdown Country
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.dropdownCountry), 2);
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputSearchCountry), "Vietnam");
-        WebUI.clickElement(driver, By.xpath("//span[normalize-space()='Vietnam']"),2);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.dropdownCountry), 2);
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputSearchCountry), "Vietnam");
+        WebUI_OLD.clickElement(driver, By.xpath("//span[normalize-space()='Vietnam']"),2);
 
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.buttonSave), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.buttonSave), 5);
 
         // Verify new customer added successfully
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.menuCustomers));
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputSearchCustomer), CUSTOMER_NAME);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.menuCustomers));
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputSearchCustomer), CUSTOMER_NAME);
         Thread.sleep(5000);
 
 
@@ -74,8 +74,8 @@ public class TestAddCustomer extends BaseTest {
         Assert.assertEquals(actualCustomer, CUSTOMER_NAME, "New customer is added successfully");
 
         // Verify trong ProjectPage
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.menuProjects), 5);
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.buttonNewProject), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.menuProjects), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.buttonNewProject), 5);
 
         driver.findElement(By.xpath("//button[@data-id='clientid']")).click();
         Thread.sleep(3000);

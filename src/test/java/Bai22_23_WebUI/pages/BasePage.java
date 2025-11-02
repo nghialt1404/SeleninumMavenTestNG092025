@@ -1,6 +1,7 @@
-package Bai17_PageObjectModel.pages;
+package Bai22_23_WebUI.pages;
 
-import keyword.WebUI_OLD;
+import keyword.WebUI;
+import keyword.WebUI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,6 +12,7 @@ public class BasePage {
     // Constructor
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        new WebUI(driver);
     }
 
     // Elements chung cho tất cả các page
@@ -27,24 +29,24 @@ public class BasePage {
 
     // methods
     public void logoutsystem(){
-        WebUI_OLD.clickElement(driver,iconprofile);
-        WebUI_OLD.clickElement(driver,optionLogOut);
+        WebUI.clickElement(iconprofile);
+        WebUI.clickElement(optionLogOut);
 
     }
     public void clickMenuDashboard() {
-        WebUI_OLD.clickElement(driver, menuDashboard);
+        WebUI.clickElement( menuDashboard);
     }
 
-    public void clickMenuCustomers() {
-        WebUI_OLD.clickElement(driver, menuCustomers);
+    public CustomersPage clickMenuCustomers() {
+        WebUI.clickElement( menuCustomers);
+        return new CustomersPage(driver);
     }
 
-    public void clickMenuProject() {
-        WebUI_OLD.clickElement(driver, menuProjects);
+    public ProjectsPage clickMenuProject() {
+
+        WebUI.clickElement( menuProjects);
+        return new ProjectsPage(driver);
     }
-
-
-
 
 }
 

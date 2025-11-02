@@ -1,6 +1,6 @@
 package Bai19_NavigationPage.pages;
 
-import keyword.WebUI;
+import keyword.WebUI_OLD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -27,21 +27,21 @@ public class BasePage {
 
     // methods
     public void logoutsystem(){
-        WebUI.clickElement(driver,iconprofile);
-        WebUI.clickElement(driver,optionLogOut);
+        WebUI_OLD.clickElement(driver,iconprofile);
+        WebUI_OLD.clickElement(driver,optionLogOut);
 
     }
     public void clickMenuDashboard() {
-        WebUI.clickElement(driver, menuDashboard);
+        WebUI_OLD.clickElement(driver, menuDashboard);
     }
 
     public void clickMenuCustomers() {
-        WebUI.clickElement(driver, menuCustomers);
+        WebUI_OLD.clickElement(driver, menuCustomers);
     }
 
     public ProjectsPage clickMenuProject() {
 
-        WebUI.clickElement(driver, menuProjects);
+        WebUI_OLD.clickElement(driver, menuProjects);
         return new ProjectsPage(driver);
     }
 

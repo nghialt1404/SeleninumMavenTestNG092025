@@ -1,7 +1,7 @@
 package Bai18_PageFactory.pages;
 
 import Bai17_PageObjectModel.pages.BasePage;
-import keyword.WebUI;
+import keyword.WebUI_OLD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,17 +56,17 @@ public class LoginPage extends BasePage {
 
     private void enterEmail(String email) {
         //inputEmail.sendKeys(email);
-        WebUI.setText(driver, inputEmail ,email);
+        WebUI_OLD.setText(driver, inputEmail ,email);
     }
 
     private void enterPassword(String password) {
         //inputPassword.sendKeys(password);
-        WebUI.setText(driver, inputPassword ,password);
+        WebUI_OLD.setText(driver, inputPassword ,password);
     }
 
     private void clickLoginButton() {
         //buttonLogin.click();
-        WebUI.clickElement(driver, buttonLogin);
+        WebUI_OLD.clickElement(driver, buttonLogin);
 
     }
 

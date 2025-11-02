@@ -2,7 +2,7 @@ package Bai16_ThucHanhCRM;
 
 import Bai11_Assert.common.LocatorsCRM;
 import Bai11_Assert.common.BaseTest;
-import keyword.WebUI;
+import keyword.WebUI_OLD;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,17 +14,17 @@ public class DashBoardTest extends BaseTest {
     public void testDashboard_ProjectTotal() throws InterruptedException {
         driver.get("https://crm.anhtester.com/admin/authentication");
 
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputEmail), "admin@example.com");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputEmail), "admin@example.com");
 
-        WebUI.setText(driver, By.xpath(LocatorsCRM.inputPassword), "123456");
+        WebUI_OLD.setText(driver, By.xpath(LocatorsCRM.inputPassword), "123456");
 
-        WebUI.clickElement(driver, By.xpath(LocatorsCRM.buttonLogin), 5);
+        WebUI_OLD.clickElement(driver, By.xpath(LocatorsCRM.buttonLogin), 5);
 
         //Get label Project Total
         String totalProjectOnDashBoard = driver.findElement(By.xpath("(//span[normalize-space()='Projects In Progress']/parent::div)/following-sibling::span")).getText();
         System.out.println("Project Total: " + totalProjectOnDashBoard);
 
-        WebUI.clickElement(driver,By.xpath("//span[normalize-space()='Projects']"),5);
+        WebUI_OLD.clickElement(driver,By.xpath("//span[normalize-space()='Projects']"),5);
         //Get label Project Total in Project menu
         String totalonprojectpage_NotStarted = driver.findElement(By.xpath("(//div[@class='_filters _hidden_inputs']//span[normalize-space()='Not Started'])/preceding-sibling::span")).getText();
         System.out.println("totalproject_NotStarted: " + totalonprojectpage_NotStarted);

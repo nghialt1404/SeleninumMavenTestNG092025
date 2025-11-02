@@ -1,4 +1,4 @@
-package Bai17_PageObjectModel.pages;
+package Bai20_ThucHanhPOM.pages;
 
 import keyword.WebUI_OLD;
 import org.openqa.selenium.By;
@@ -32,6 +32,7 @@ public class BasePage {
 
     }
     public void clickMenuDashboard() {
+
         WebUI_OLD.clickElement(driver, menuDashboard);
     }
 
@@ -39,8 +40,10 @@ public class BasePage {
         WebUI_OLD.clickElement(driver, menuCustomers);
     }
 
-    public void clickMenuProject() {
+    public ProjectsPage clickMenuProject() {
+
         WebUI_OLD.clickElement(driver, menuProjects);
+        return new ProjectsPage(driver);
     }
 
 

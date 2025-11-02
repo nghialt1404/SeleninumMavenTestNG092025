@@ -1,7 +1,7 @@
 package Bai14_JavascriptExecutor;
 
 import Bai11_Assert.common.BaseTest;
-import keyword.WebUI;
+import keyword.WebUI_OLD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -76,9 +76,9 @@ public class DemoJavacriptExecutor extends BaseTest {
         WebElement inputPassword = driver.findElement(By.xpath("//input[@id='password']"));
 
         // Highlight element
-        WebUI.highlightElement(driver, inputEmail);
+        WebUI_OLD.highlightElement(driver, inputEmail);
         Thread.sleep(2000);
-        WebUI.highlightElement(driver, inputPassword,"green");
+        WebUI_OLD.highlightElement(driver, inputPassword,"green");
         Thread.sleep(2000);
     }
 
