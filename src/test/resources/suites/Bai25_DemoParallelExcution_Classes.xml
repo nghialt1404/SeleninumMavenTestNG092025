@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite Demo Parallel Testing By Module Classes" verbose="1">
+    <test name="Demo Parallel Testing By Methods" parallel="classes">
+        <classes>
+            <class name="Bai25_ParallelExcution.ChormeTest"/>
+            <class name="Bai25_ParallelExcution.EdgeTest"/>
+        </classes>
+    </test>
+</suite>

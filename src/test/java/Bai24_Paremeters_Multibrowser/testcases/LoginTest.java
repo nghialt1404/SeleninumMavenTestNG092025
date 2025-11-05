@@ -1,9 +1,8 @@
-package Bai22_23_WebUI.testcases;
+package Bai24_Paremeters_Multibrowser.testcases;
 
 import Bai11_Assert.common.BaseTest;
-
-import Bai22_23_WebUI.pages.BasePage;
-import Bai22_23_WebUI.pages.LoginPage;
+import Bai24_Paremeters_Multibrowser.pages.BasePage;
+import Bai24_Paremeters_Multibrowser.pages.LoginPage;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {

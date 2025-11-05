@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Bai24_Paremeters" verbose="1">
+
+    <parameter name="number1" value="1"></parameter>
+    <parameter name="number2" value="2"></parameter>
+    <parameter name="number3" value="3"></parameter>
+    <test name="FirstTest">
+        <parameter name="number1" value="10"></parameter>
+        <parameter name="number2" value="20"></parameter>
+        <parameter name="number3" value="30"></parameter>
+
+        <classes>
+            <class name="Bai24_Paremeters_Multibrowser.DemoParameters">
+                <methods>
+                    <include name="testParameter01"/>
+                    <include name="testParameter02"/>
+                    <include name="testParameter03"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
+</suite>

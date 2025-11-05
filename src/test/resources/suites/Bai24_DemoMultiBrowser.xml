@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Bai24_Paremeters" verbose="1">
+
+    <test name="ChormeTest">
+        <parameter name="browser" value="chorme"></parameter>
+
+        <classes>
+            <class name="Bai24_Paremeters_Multibrowser.testcases.LoginTest">
+                <methods>
+                    <include name="testLoginSuccess"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EgdeTest">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="Bai24_Paremeters_Multibrowser.testcases.LoginTest">
+                <methods>
+                    <include name="testLoginFailWithInvalidEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="Bai24_Paremeters_Multibrowser.testcases.LoginTest">
+                <methods>
+                    <include name="testLoginFailWithEmailNull"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
